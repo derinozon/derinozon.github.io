@@ -130,7 +130,7 @@ button {
 #source {
 	color: rgb(65, 67, 58);
 	background-color: rgb(20, 20, 20);
-	
+	padding: 10px;
 }
 
 @media (max-width:568px) {
