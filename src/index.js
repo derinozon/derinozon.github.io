@@ -11,7 +11,8 @@ window.addEventListener("scroll", (event) => {
 	FadeHello(this.scrollY);
 });
 
-var btns = document.getElementsByClassName("editor-btn");
+nav = document.getElementById("editor-nav");
+btns = nav.getElementsByTagName("button");
 for (let i = 0; i < btns.length; i++) {
 	btns[i].addEventListener("click",() => {
 		for (let a = 0; a < btns.length; a++) {
@@ -21,5 +22,5 @@ for (let i = 0; i < btns.length; i++) {
 	});
 }
 
-var btn = document.getElementsByClassName("editor-btn")[0];
+var btn = btns[0];
 btn.classList.add("active-editor-btn");

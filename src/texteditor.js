@@ -19,23 +19,5 @@ function INIT () {
 	editor.setShowPrintMargin(false);
 }
 
-function ChangeSession (i) {
-	if (i === 0) {
-		editor.setSession(cs);
-	}
-	if (i === 1) {
-		editor.setSession(py);
-	}
-	if (i === 2) {
-		editor.setSession(java);
-	}
-	if (i === 3) {
-		editor.setSession(js);
-	}
-	if (i === 4) {
-		editor.setSession(cpp);
-	}
-
-}
 INIT();
-ChangeSession(0);
+editor.setSession(cs);
