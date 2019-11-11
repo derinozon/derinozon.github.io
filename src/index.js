@@ -16,7 +16,7 @@ function HandleContact () {
              alert(this.responseText);
          }
     };
-    xhttp.open("POST", "https://paper.rf.gd/api/", true);
+    xhttp.open("POST", "http://paper.rf.gd/api/", true);
     xhttp.setRequestHeader("Content-type", "text/plain");
     xhttp.send("Your JSON Data Here");
 }
