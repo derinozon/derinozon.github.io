@@ -39,7 +39,7 @@ head,body {
 	justify-content: center;
 
 	height: 100vh;
-	width: auto;
+	width: 100vw;
 
     background-image: url("res/img/top-bg.jpg");
 }
@@ -48,6 +48,13 @@ head,body {
     color: #f2f2f2;
     font-size: 3vw;
     letter-spacing: 8px;
+}
+
+#pp {
+	border-radius: 100%;
+	border: 4px solid #ddd;
+	max-width: 100px;
+	max-height: 100px;
 }
 
 /* ABOUT */
@@ -145,7 +152,7 @@ head,body {
 #source a:hover {
 	color: rgb(65, 67, 58);
 }
-/*
+
 @media (max-width:568px) {
     .parallax {
         background-attachment: scroll;
@@ -154,4 +161,3 @@ head,body {
     	background-size: cover;
     }
 }
-*/
