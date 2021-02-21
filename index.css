@@ -18,6 +18,10 @@ head,body {
 	color: rgb(200,200,200);
 }
 
+.relative {
+	position: relative;
+}
+
 .parallax {
     background-attachment: fixed;
     background-position: center;
@@ -30,8 +34,40 @@ head,body {
     margin: 0 auto;
 }
 
+/* video {
+	object-fit: fill;
+	
+	right: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: 100%;
+} */
+
+video {
+	object-fit: cover;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+  }
+
 
 /* HOME */
+
+#info {
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); */
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 #top-img {
     display: flex;
@@ -40,22 +76,20 @@ head,body {
 
 	height: 100vh;
 	width: 100vw;
-
-    background-image: url("res/img/top-bg.jpg");
 }
 
 #h-hello {
-
-	margin: 25px;
+	width: 400px;
+	
 	color: #ffffff;
 	
-	font-size: 3.5vw;
+	font-size: 35px;
 	
 	letter-spacing: 8px;
 }
 
 #h-hello p {
-    font-size: 1vw;
+    font-size: 10px;
 }
 
 #pp {
@@ -63,6 +97,7 @@ head,body {
 	border: 4px solid #ddd;
 	width: 128px;
 	height: 128px;
+	margin-bottom: 20px;
 
 	display: block;
 }
@@ -85,59 +120,6 @@ head,body {
 
 #skills {
 	padding: 20px;
-}
-
-#editor-container {
-	background-color: rgb(30, 31, 28);
-	height: 60vh;
-}
-
-#editor {
-    width: 100%;
-    height: 80%;
-	font-size: 1.5em;
-}
-
-#editor-nav {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    text-decoration: none;
-}
-
-#editor-nav button {
-    border: none;
-    margin: 0;
-	padding: 0;
-	
-	border: 1px solid rgb(30, 31, 28);
-    float: left;
-    display: block;
-    color: rgb(200,200,200);
-	font-size: 1.1rem;
-
-    text-align: center;
-	text-decoration: none;
-	
-    padding: 14px;
-    padding-left: 25px;
-    padding-right: 25px;
-    
-    transition: background 0.2s;
-}
-
-#editor-nav button:not(.active-editor-btn) {
-    background-color: rgb(47, 49, 41);
-}
-
-#editor-nav button:hover:not(.active-editor-btn) {
-    background-color: rgb(65, 67, 58);
-}
-
-.active-editor-btn {
-	color: rgb(240,240,240);
-    background-color: rgb(30, 31, 28);
 }
 
 /* CONTACT */
