@@ -67,6 +67,8 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  background-image: url(https://cdnjs.cloudflare.com/ajax/libs/vegas/2.3.1/overlays/02.png);
 }
 
 #top-img {
@@ -152,4 +154,9 @@ video {
     	background-repeat: no-repeat;
     	background-size: cover;
     }
+}
+
+/* OPERA */
+#detach-button-host {
+	display: none;
 }
