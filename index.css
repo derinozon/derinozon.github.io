@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('res/font/Roboto/Roboto-Light.ttf');
+}
+
 head,body {
     margin: 0;
     padding: 0;
@@ -7,17 +12,14 @@ head,body {
 	background-color: rgb(20, 20, 20);
 }
 
-@font-face {
-	font-family: 'Roboto';
-	src: url('res/font/Roboto/Roboto-Light.ttf');
-}
-
 h1 {
 	font-size: 3em;
+	font-size: 2.5em;
 }
 
 p {
 	font-size: 1.5em;
+	font-size: 1.25em;
 }
 
 .dark-theme {
@@ -42,6 +44,8 @@ p {
     margin: 0 auto;
 }
 
+
+
 video {
 	object-fit: cover;
 	width: 100vw;
@@ -55,11 +59,6 @@ video {
 /* HOME */
 
 #info {
-	/* position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%); */
-
   height: 100vh;
 
   display: flex;
@@ -109,24 +108,128 @@ video {
     text-align: center;
 }
 
+#about a {
+	text-decoration: none;
+}
+
+.social-img {
+	width: 48px;
+	height: 48px;
+	margin: 16px;
+	
+}
+
+.social-img:hover {
+	filter: brightness(100%) hue-rotate(111deg) saturate(300%);
+	transition: 0s;
+}
+
+.social-img:not(hover) {
+	/* filter: brightness(70%); */
+	filter: sepia(0%) saturate(0%) brightness(70%) hue-rotate(0deg);
+	transition: 0.3s;
+}
+
+/* #s2:not(hover) {
+	filter: brightness(70%);
+	transition: 0.3s;
+} */
+#s1:hover {
+	filter: sepia(0%) saturate(0%) brightness(100%) hue-rotate(0deg);
+}
+#s2:hover {
+	filter: sepia(100%) saturate(1000%) brightness(60%) hue-rotate(290deg);
+}
+#s3:hover {
+	filter: sepia(100%) saturate(1000%) brightness(50%) hue-rotate(140deg);
+}
+#s4:hover {
+	filter: sepia(100%) saturate(1000%) brightness(70%) hue-rotate(130deg);
+}
+
 #mid-img {
     height: 50vh;
 	width: auto;
 
-    background-image: url("res/img/mid-bg.jpg");
+    background-image: url("res/img/MoM.jpg");
 }
 
 /* SKILLS */
 
 #skills {
 	padding: 20px;
+	display: flex;
+}
+
+#skills p {
+	width: 90%;
+	margin: 20px;
+	height: 200px;
+}
+
+#right-text {
+	justify-content: right;
+	text-align: right;
+}
+
+#left-text {
+	justify-content: left;
+	text-align: left;
+}
+
+.sketchfab-embed-wrapper {
+	height: 300px;
+	width: 90%;
+	margin: 20px;
+}
+
+.sketchfab-embed-wrapper iframe {
+	height: 100%;
+	width: 100%;
+}
+
+.h-box {
+	display: flex;
+  	align-items: center;
+	justify-content: center;
+}
+
+.v-box {
+	display: flex;
+	flex-direction: column;
+  	align-items: center;
+	justify-content: space-evenly;
+}
+
+/* TERMINAL */
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+	font-family: 'Courier New', monospace;
+  font-size: 2em;
+  background-color: rgb(20, 20, 20);
+		align-items: flex-start;
+		justify-content: left;
+	width: 90%;
+	height: 200px;
+
+	margin: 20px;
+  
+  text-align:left;
+  color:white;
+}
+
+#console {
+	bottom: 2px;
 }
 
 /* CONTACT */
 
 #bot-img {
     height: 50vh;
-    background-image: url("res/img/spc.jpg");
+    background-image: url("res/img/house-dev.jpg");
 }
 
 #contact {
