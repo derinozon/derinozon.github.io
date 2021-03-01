@@ -186,6 +186,7 @@ video {
 .sketchfab-embed-wrapper iframe {
 	height: 100%;
 	width: 100%;
+	border: none;
 }
 
 .h-box {
@@ -234,6 +235,45 @@ video {
 
 #contact {
 	padding: 60px;
+}
+
+#contact button {
+    border: none;
+    margin: 0;
+	padding: 0;
+	
+	border: 1px solid rgb(30, 31, 28);
+    float: left;
+    display: block;
+    color: rgb(200,200,200);
+	font-size: 1.1rem;
+
+    text-align: center;
+	text-decoration: none;
+	
+	margin: 20px;
+    padding: 14px;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+    transition: background 0.2s;
+}
+
+#contact button:not(.active-editor-btn) {
+    background-color: rgb(47, 49, 41);
+}
+
+#contact button:hover:not(.active-editor-btn) {
+    background-color: rgb(65, 67, 58);
+}
+
+#mailtext {
+	background-color: rgb(20, 20, 20);
+	color: rgb(200,200,200);
+	border: none;
+	font-size: 23px;
+	/* width: 70%;
+	height: 400px; */
 }
 
 #source {

@@ -13,6 +13,11 @@ window.addEventListener("scroll", () => {
 	FadeHello(this.scrollY);
 });
 
+function SendMail () {
+	let content = document.getElementById("mailtext").textContent;
+	window.open('mailto:derinozon@gmail.com?subject=Hello&body='+content);
+}
+
 // Terminal FX //
 
 const con = document.getElementById('console');
@@ -63,4 +68,4 @@ function consoleText(words, colors) {
 	, 400)
 }
 
-consoleText(['Python', 'Node JS', 'C++', 'Java FX'], ['lightblue','yellow','magenta', 'brown']);
+consoleText(['Python', 'Node JS', 'C++', 'C#', 'Java FX'], ['lightblue','yellow','magenta', 'green', 'brown']);
