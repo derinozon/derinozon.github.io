@@ -1,20 +1,20 @@
 const hello = document.getElementById("h-hello");
 
-function FadeHello (scrollPos) {
-	let lim = hello.offsetHeight / 2;
+function FadeHello () {
+	let opacity = 1 - window.pageYOffset / 300;
+	if (opacity < 0) opacity = 0;
 	
-	let a = (lim - scrollPos) / lim;
-	if (a < 0) return;
-	
-	hello.style.opacity = a;
+	hello.style.opacity = opacity;
 }
 
 window.addEventListener("scroll", () => {
-	FadeHello(this.scrollY);
+	FadeHello();
 });
 
 function SendMail () {
-	let content = document.getElementById("mailtext").textContent;
+	let content = document.getElementById("mailtext").value;
+	
+	if (content === '') return;
 	window.open('mailto:derinozon@gmail.com?subject=Hello&body='+content);
 }
 

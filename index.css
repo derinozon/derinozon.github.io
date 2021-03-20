@@ -44,7 +44,18 @@ p {
     margin: 0 auto;
 }
 
+.h-box {
+	display: flex;
+  	align-items: center;
+	justify-content: center;
+}
 
+.v-box {
+	display: flex;
+	flex-direction: column;
+  	align-items: center;
+	justify-content: space-evenly;
+}
 
 video {
 	object-fit: cover;
@@ -167,18 +178,30 @@ video {
 	height: 200px;
 }
 
-#right-text {
+.skills-box1 {
+	display: flex;
+  	align-items: center;
+	justify-content: center;
+}
+
+.skills-box2 {
+	display: flex;
+  	align-items: center;
+	justify-content: center;
+}
+
+.skills-box1 p {
 	justify-content: right;
 	text-align: right;
 }
 
-#left-text {
+.skills-box2 p {
 	justify-content: left;
 	text-align: left;
 }
 
 .sketchfab-embed-wrapper {
-	height: 300px;
+	height: 200px;
 	width: 90%;
 	margin: 20px;
 }
@@ -189,18 +212,7 @@ video {
 	border: none;
 }
 
-.h-box {
-	display: flex;
-  	align-items: center;
-	justify-content: center;
-}
 
-.v-box {
-	display: flex;
-	flex-direction: column;
-  	align-items: center;
-	justify-content: space-evenly;
-}
 
 /* TERMINAL */
 
@@ -272,8 +284,6 @@ video {
 	color: rgb(200,200,200);
 	border: none;
 	font-size: 23px;
-	/* width: 70%;
-	height: 400px; */
 }
 
 #source {
@@ -288,6 +298,26 @@ video {
 	color: rgb(65, 67, 58);
 }
 
+@media (max-width:800px) {
+    .skills-box1 {
+		flex-direction: column;
+	}
+	.skills-box2 {
+		flex-direction: column-reverse;
+		
+	}
+
+	#skills p {
+		justify-content: center;
+		text-align: center;
+		height: auto;
+	}
+
+	#mailtext {
+		width: 400px;
+	}
+}
+
 @media (max-width:568px) {
     .parallax {
         background-attachment: scroll;
@@ -295,6 +325,10 @@ video {
     	background-repeat: no-repeat;
     	background-size: cover;
     }
+
+	#mailtext {
+		width: 250px;
+	}
 }
 
 /* OPERA */
