@@ -99,7 +99,7 @@ video {
 }
 
 #h-hello p {
-    font-size: 10px;
+    font-size: 15px;
 }
 
 #pp {
@@ -316,6 +316,8 @@ video {
 	#mailtext {
 		width: 400px;
 	}
+
+	
 }
 
 @media (max-width:568px) {
@@ -327,7 +329,11 @@ video {
     }
 
 	#mailtext {
-		width: 250px;
+		width: 300px;
+	}
+
+	#info {
+		background-image: none;
 	}
 }
 

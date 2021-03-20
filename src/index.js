@@ -1,14 +1,19 @@
 const hello = document.getElementById("h-hello");
+const video = document.getElementsByTagName("video")[0];
 
 function FadeHello () {
 	let opacity = 1 - window.pageYOffset / 300;
-	if (opacity < 0) opacity = 0;
-	
-	hello.style.opacity = opacity;
+	hello.style.opacity = opacity < 0 ? 0 : opacity;
+}
+
+function FadeVideo () {
+	let opacity = 1 - window.pageYOffset / window.innerHeight;
+	video.style.display = opacity < 0 ? "none" : "initial";
 }
 
 window.addEventListener("scroll", () => {
 	FadeHello();
+	FadeVideo();
 });
 
 function SendMail () {
