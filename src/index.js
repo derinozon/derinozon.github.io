@@ -16,11 +16,20 @@ window.addEventListener("scroll", () => {
 	FadeVideo();
 });
 
+const userAction = async () => {
+	console.log("getting data");
+	const response = await fetch('http://dev.revolando.com/api/mail.php?msg=hello');
+	
+	alert(response.text);
+}
+
 function SendMail () {
 	let content = document.getElementById("mailtext").value;
 	
 	if (content === '') return;
-	window.open('mailto:derinozon@gmail.com?subject=Hello&body='+content);
+	//window.open('mailto:derinozon@gmail.com?subject=Hello&body='+content);
+	userAction();
+
 }
 
 // Terminal FX //
