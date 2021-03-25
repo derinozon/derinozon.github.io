@@ -169,28 +169,35 @@ video {
 
 #skills {
 	padding: 20px;
-	display: flex;
 }
 
 #skills p {
 	width: 90%;
 	margin: 20px;
-	height: 200px;
+	height: 170px;
+}
+
+#skills-container {
+	margin-top: 40px;
 }
 
 .skills-box1 {
 	display: flex;
   	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+	width: 50%;
 }
 
 .skills-box2 {
 	display: flex;
   	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+	width: 50%;
 }
 
-.skills-box1 p {
+/* .skills-box1 p {
 	justify-content: right;
 	text-align: right;
 }
@@ -198,12 +205,11 @@ video {
 .skills-box2 p {
 	justify-content: left;
 	text-align: left;
-}
+} */
 
 .sketchfab-embed-wrapper {
-	height: 200px;
+	height: 300px;
 	width: 90%;
-	margin: 20px;
 }
 
 .sketchfab-embed-wrapper iframe {
@@ -221,17 +227,15 @@ video {
 }
 .console-container {
 	font-family: 'Courier New', monospace;
-  font-size: 2em;
-  background-color: rgb(20, 20, 20);
-		align-items: flex-start;
-		justify-content: left;
+	font-size: 2em;
+	background-color: rgb(20, 20, 20);
+	align-items: flex-start;
+	justify-content: left;
 	width: 90%;
-	height: 200px;
-
-	margin: 20px;
+	height: 300px;
   
-  text-align:left;
-  color:white;
+	text-align:left;
+	color:white;
 }
 
 #console {
@@ -279,11 +283,13 @@ video {
     background-color: rgb(65, 67, 58);
 }
 
-#mailtext {
+.input-field {
 	background-color: rgb(20, 20, 20);
 	color: rgb(200,200,200);
 	border: none;
 	font-size: 23px;
+	margin-bottom: 25px;
+	font-family: 'Courier New', monospace;
 }
 
 #source {
@@ -299,18 +305,22 @@ video {
 }
 
 @media (max-width:800px) {
-    .skills-box1 {
-		flex-direction: column;
-	}
-	.skills-box2 {
-		flex-direction: column-reverse;
-		
-	}
-
-	#skills p {
+    
+	/* #skills p {
 		justify-content: center;
 		text-align: center;
 		height: auto;
+	} */
+
+	#skills-container {
+		flex-direction: column;
+	}
+
+	.skills-box1 {
+		width: 100%;
+	}
+	.skills-box2 {
+		width: 100%;
 	}
 
 	#mailtext {

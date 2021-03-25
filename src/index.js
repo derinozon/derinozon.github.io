@@ -18,18 +18,29 @@ window.addEventListener("scroll", () => {
 
 const userAction = async () => {
 	console.log("getting data");
-	const response = await fetch('http://dev.revolando.com/api/mail.php?msg=hello');
+	let l1 = 'http://dev.revolando.com/api/mail.php?msg=hello';
+	let l2 = 'https://dero-mailapi.herokuapp.com/index.php?msg=hello';
+	const response = await fetch(l2);
 	
-	alert(response.text);
+	alert(response.ok);
 }
 
-function SendMail () {
+async function SendMail () {
 	let content = document.getElementById("mailtext").value;
-	
 	if (content === '') return;
-	//window.open('mailto:derinozon@gmail.com?subject=Hello&body='+content);
-	userAction();
 
+	let sender = document.getElementById("mailsender").value;
+	if (sender === '') sender = "example@gmail.com";
+
+	let l2 = 'https://dero-mailapi.herokuapp.com/index.php?msg=' + content + "&sender=" + sender;
+	const response = await fetch(l2);
+
+	if (!response.ok) {
+		alert("You can't send two mails at the same day");
+	}
+	else {
+		alert("Your mail has been sent successfully");
+	}
 }
 
 // Terminal FX //

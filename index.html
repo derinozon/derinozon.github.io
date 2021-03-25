@@ -45,26 +45,26 @@
 		<div id="skills" class="dark-theme center-content relative v-box">
 			<h1>Things i do</h1>
 			
-			<div class="skills-box1">
-				<div class='console-container h-box'>
-					<span>~ root$&nbsp;</span>
-					<span id='text'></span>
-					<div id='console'>
-					|<!-- &#65372; -->
+			<div id="skills-container" class="h-box">
+				<div class="skills-box1">
+					<div class='console-container h-box'>
+						<span>~ root$&nbsp;</span>
+						<span id='text'></span>
+						<div id='console'>
+						|<!-- &#65372; -->
+						</div>
 					</div>
+					<p>Im constantly learning and experimenting with new languages and technologies since highschool. I code with love and build Web/Mobile/Desktop/XR apps that inspire.</p>
 				</div>
-				<p>Im constantly learning and experimenting with new languages and technologies since highschool. I code with love and build Web/Mobile/Desktop/XR apps that inspire.</p>
-			</div>
 
-			<div class="skills-box2">
-				
-				<p>Making games was my childhood dream and now it is my passion. I create using Unity Engine and make basic 3D models using Cinema4D. Im also interested in Game Engine development and currently coding my own engine with SDL and OpenGL.</p>
-				
-				<div class="sketchfab-embed-wrapper h-box">
-					<iframe title="Hourglass" src="https://sketchfab.com/models/bf603827d8c3432894049976dc9f17f3/embed">
-					</iframe>
+				<div class="skills-box2">
+					<div class="sketchfab-embed-wrapper h-box">
+						<iframe title="Hourglass" src="https://sketchfab.com/models/bf603827d8c3432894049976dc9f17f3/embed">
+						</iframe>
+					</div>
+
+					<p>Making games was my childhood dream and now it is my passion. I create using Unity Engine and make basic 3D models using Cinema4D. Im also interested in Game Engine development and currently coding my own engine with SDL and OpenGL.</p>
 				</div>
-				
 			</div>
 		</div>
 		
@@ -74,7 +74,8 @@
 			<h1>Say Hi</h1>
 			<p>Send your message to my mail address</p>
 			<div class="v-box">
-				<textarea id="mailtext" rows="8" cols="50"></textarea>
+				<input placeholder="Your mail address" class="input-field" type="email" id="mailsender">
+				<textarea placeholder="Your message..." class="input-field" id="mailtext" rows="8" cols="50"></textarea>
 				<button type="submit" onclick="SendMail()">Send</button>
 			</div>
 		</div>
