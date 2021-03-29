@@ -305,12 +305,6 @@ video {
 }
 
 @media (max-width:800px) {
-    
-	/* #skills p {
-		justify-content: center;
-		text-align: center;
-		height: auto;
-	} */
 
 	#skills-container {
 		flex-direction: column;
