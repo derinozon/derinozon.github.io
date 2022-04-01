@@ -25,7 +25,7 @@ const userAction = async () => {
 	alert(response.ok);
 }
 
-async function SendMail () {
+async function SendMailServer () {
 	let content = document.getElementById("mailtext").value;
 	if (content === '') return;
 
@@ -41,6 +41,16 @@ async function SendMail () {
 	else {
 		alert("Your mail has been sent successfully");
 	}
+}
+
+function SendMail () {
+	let content = document.getElementById("mailtext").value;
+	if (content === '') return;
+
+	let sender = document.getElementById("mailsender").value;
+	if (sender === '') sender = "Subject";
+
+	window.location.href = 'mailto:derinozon@gmail.com?subject='+sender+'&body='+content;
 }
 
 // Terminal FX //
