@@ -386,12 +386,12 @@ video {
 }
 
 @media (max-width:568px) {
-    .parallax {
+    /* .parallax {
         background-attachment: scroll;
     	background-position: center;
     	background-repeat: no-repeat;
     	background-size: cover;
-    }
+    } */
 
 	#mailtext {
 		width: 300px;
