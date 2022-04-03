@@ -13,11 +13,13 @@ head,body {
 }
 
 h1 {
-	font-size: 2.25em;
+	font-size: 3em;
+	font-size: 1.9em;
 }
 
 p {
 	font-size: 1.5em;
+	font-size: 1.4em;
 }
 
 .dark-theme {
@@ -276,7 +278,7 @@ video {
 }
 
 #projects {
-	padding: 40px;
+	padding: 0px;
 }
 
 #projects p {
