@@ -43,6 +43,54 @@ async function SendMailServer () {
 	}
 }
 
+let proj_index = 0;
+
+function SwitchProject (i) {
+	const pimg = document.getElementById("project-image");
+	const ph = document.getElementById("project-header");
+	const pp = document.getElementById("project-description");
+	let img_arr = ["res/img/me.jpg", "res/img/MoM.jpg", "res/img/house-dev.jpg"];
+
+	var list = JSON.parse( `[{
+		"img": "res/img/catch_me.png",
+		"header": "CatchMe!",
+		"info": "Made a game together with Aydın Özön in a week for Nokia 3310 Jam 3. Developed a 2D Game Engine from scratch in C++ for this game jam resulting in a lightweight and fast game that is less than 1MB"
+	  },
+	  {
+		"img": "res/img/kopia.png",
+		"header": "Kopia",
+		"info": "Frauma Entertainments submission on ATOM Game Jam 2 scoring #1 in popularity in 407 entries. Coded an exam cheating simulator with an AI teacher that tracks your behaviour using optimised methods in 72 hours."
+	  },
+	  {
+		"img": "res/img/cyp.png",
+		"header": "CYP Auto",
+		"info": "Worked as an app developer for Revolando and b4bynd. Developed and built the Android/IOS port of the web based automobile sales platform CYP Auto in a week"
+	  },
+	  {
+		"img": "res/img/vloop.png",
+		"header": "Virtual Loop",
+		"info": "Simulated a physics bending non euclidian world using tricks such as portals in Frauma Entertainments submission of 72 hour Mağara Jam 3."
+	  },
+	  {
+		"img": "res/img/this2.png",
+		"header": "This Website",
+		"info": "Coded this lightweight staticly served website from scratch with modern HTML CSS and JS without using any frameworks or external resources."
+	  }
+	]` );
+	proj_index += i;
+
+	if (proj_index < 0) {
+		proj_index = list.length-1;
+	}
+	if (proj_index >= list.length) {
+		proj_index = 0;
+	}
+
+	pimg.src = list[proj_index].img;
+	ph.innerHTML = list[proj_index].header;
+	pp.innerHTML = list[proj_index].info;
+}
+
 function SendMail () {
 	let content = document.getElementById("mailtext").value;
 	if (content === '') return;
@@ -104,3 +152,4 @@ function consoleText(words, colors) {
 }
 
 consoleText(['Python', 'Node JS', 'C++', 'C#', 'Java FX'], ['lightblue','yellow','magenta', 'green', 'brown']);
+SwitchProject(0);

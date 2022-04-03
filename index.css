@@ -136,7 +136,6 @@ video {
 }
 
 .social-img:not(hover) {
-	/* filter: brightness(70%); */
 	filter: sepia(0%) saturate(0%) brightness(70%) hue-rotate(0deg);
 	transition: 0.3s;
 }
@@ -242,11 +241,73 @@ video {
 	bottom: 2px;
 }
 
-/* CONTACT */
+/* PROJECTS */
 
 #bot-img {
     height: 50vh;
     background-image: url("res/img/house-dev.jpg");
+}
+
+#project-image {
+	border-radius: 5%;
+	border: 0px solid #ddd;
+	width: 150px;
+	height: 100px;
+	margin-bottom: 20px;
+	object-fit: cover;
+
+	display: block;
+}
+
+.project-arrow {
+	width: 58px;
+	height: 80px;
+	margin: 10px;
+	margin-bottom: 30px;
+}
+
+
+.project-arrow:hover {
+	filter: brightness(100%);
+	transition: 0.3s;
+}
+
+.project-arrow:not(hover) {
+	filter: brightness(70%);
+	transition: 0.3s;
+}
+
+#projects {
+	padding: 40px;
+}
+
+#projects p {
+	height: 20vh;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#project-container object {
+	width: 58px;
+	height: 80px;
+	margin: 10px;
+	margin-bottom: 30px;
+	pointer-events: none;
+
+	filter: brightness(70%);
+	transition: 0.3s;
+}
+
+#project-container object:hover {
+	filter: brightness(100%);
+	transition: 0.3s;
+}
+
+/* CONTACT */
+
+#footer-img {
+    height: 50vh;
+    background-image: url("res/img/Savannah.png");
 }
 
 #contact {
