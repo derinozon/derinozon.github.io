@@ -49,31 +49,41 @@ function SwitchProject (i) {
 	const pimg = document.getElementById("project-image");
 	const ph = document.getElementById("project-header");
 	const pp = document.getElementById("project-description");
-	let img_arr = ["res/img/me.jpg", "res/img/MoM.jpg", "res/img/house-dev.jpg"];
 
 	var list = JSON.parse( `[{
 		"img": "res/img/catch_me.png",
 		"header": "CatchMe!",
+		"link": "https://derinozon.itch.io/catchme",
 		"info": "Made a game together with Aydın Özön in a week for Nokia 3310 Jam 3. Developed a 2D Game Engine from scratch in C++ for this game jam resulting in a lightweight and fast game that is less than 1MB"
-	  },
-	  {
-		"img": "res/img/kopia.png",
-		"header": "Kopia",
-		"info": "Frauma Entertainments submission on ATOM Game Jam 2 scoring #1 in popularity in 407 entries. Coded an exam cheating simulator with an AI teacher that tracks your behaviour using optimised methods in 72 hours."
-	  },
-	  {
-		"img": "res/img/cyp.png",
-		"header": "CYP Auto",
-		"info": "Worked as an app developer for Revolando and b4bynd. Developed and built the Android/IOS port of the web based automobile sales platform CYP Auto in a week"
 	  },
 	  {
 		"img": "res/img/vloop.png",
 		"header": "Virtual Loop",
+		"link": "https://frauma.itch.io/virtualloop",
 		"info": "Simulated a physics bending non euclidian world using tricks such as portals in Frauma Entertainments submission of 72 hour Mağara Jam 3."
+	  },
+	  {
+		"img": "res/img/cyp.png",
+		"link": "_",
+		"header": "CYP Auto",
+		"info": "Worked as an app developer for Revolando and b4bynd. Developed and built the Android/IOS port of the web based automobile sales platform CYP Auto in a week"
+	  },
+	  {
+		"img": "res/img/kopia.png",
+		"link": "https://derinozon.itch.io/kopia",
+		"header": "Kopia",
+		"info": "Frauma Entertainments submission on ATOM Game Jam 2 scoring #1 in popularity in 407 entries. Coded an exam cheating simulator with an AI teacher that tracks your behaviour using optimised methods in 72 hours."
+	  },
+	  {
+		"img": "res/img/housein.png",
+		"header": "ArchViz Demo 2019",
+		"link": "https://www.youtube.com/watch?v=NxP5cp1gnN8",
+		"info": "Did the level design and programming on this ArchViz demo in highschool"
 	  },
 	  {
 		"img": "res/img/this2.png",
 		"header": "This Website",
+		"link": "_",
 		"info": "Coded this lightweight staticly served website from scratch with modern HTML CSS and JS without using any frameworks or external resources."
 	  }
 	]` );
@@ -87,6 +97,13 @@ function SwitchProject (i) {
 	}
 
 	pimg.src = list[proj_index].img;
+	if (list[proj_index].link == '_') {
+		pimg.parentElement.style.pointerEvents = "none";
+	}
+	else {
+		pimg.parentElement.style.pointerEvents = "auto";
+		pimg.parentElement.href = list[proj_index].link;
+	}
 	ph.innerHTML = list[proj_index].header;
 	pp.innerHTML = list[proj_index].info;
 }

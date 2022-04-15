@@ -249,10 +249,10 @@ video {
 }
 
 #project-image {
-	border-radius: 5%;
+	border-radius: 3%;
 	border: 0px solid #ddd;
-	width: 150px;
-	height: 100px;
+	width: 550px;
+	height: 350px;
 	margin-bottom: 20px;
 	object-fit: cover;
 
@@ -382,7 +382,12 @@ video {
 		width: 400px;
 	}
 
-	
+	#project-image {
+		
+		width: 200px;
+		height: 140px;
+		
+	}
 }
 
 @media (max-width:568px) {
