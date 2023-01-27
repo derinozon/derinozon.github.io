@@ -90,16 +90,18 @@ video {
 
 #h-hello {
 	width: 400px;
-	
 	color: #ffffff;
-	
-	font-size: 35px;
-	
 	letter-spacing: 8px;
+}
+
+#h-hello h {
+    font-size: 35px;
+	filter: drop-shadow(2px 2px 2px rgb(60, 60, 60));
 }
 
 #h-hello p {
     font-size: 15px;
+	filter: drop-shadow(1px 1px 1px rgb(60, 60, 60));
 }
 
 #pp {
@@ -110,6 +112,11 @@ video {
 	margin-bottom: 20px;
 
 	display: block;
+}
+
+.down-arrow {
+	width: 64px;
+	height: 64px;
 }
 
 /* ABOUT */
