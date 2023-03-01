@@ -168,7 +168,7 @@ video {
 }
 
 #mid-img {
-    height: 50vh;
+    height: 40vh;
 	width: auto;
 
     background-image: url("res/img/MoM.jpg");
@@ -253,7 +253,7 @@ video {
 /* PROJECTS */
 
 #bot-img {
-    height: 50vh;
+    height: 40vh;
     background-image: url("res/img/house-dev.jpg");
 }
 
@@ -315,7 +315,7 @@ video {
 /* CONTACT */
 
 #footer-img {
-    height: 50vh;
+    height: 40vh;
     background-image: url("res/img/Savannah.png");
 }
 
