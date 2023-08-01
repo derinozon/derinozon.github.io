@@ -1,13 +1,53 @@
 const hello = document.getElementById("h-hello");
 const video = document.getElementsByTagName("video")[0];
 
+function RegisterAnimation (enabledTag, disabledTag) {
+	const observerUp = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add(enabledTag)
+				entry.target.classList.remove(disabledTag)
+			}
+		})
+	})
+
+	document.querySelectorAll('.'+disabledTag).forEach(el => observerUp.observe(el));
+}
+
+
+const observerRight = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('anim-fade-right-enabled')
+			entry.target.classList.remove('anim-fade-right-disabled')
+		}
+	})
+})
+
+const observerLeft = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('anim-fade-left-enabled')
+			entry.target.classList.remove('anim-fade-left-disabled')
+		}
+	})
+})
+
+RegisterAnimation('anim-fade-up-enabled', 'anim-fade-up-disabled');
+
+const rightElements = document.querySelectorAll('.anim-fade-right-disabled');
+rightElements.forEach(el => observerRight.observe(el));
+
+const leftElements = document.querySelectorAll('.anim-fade-left-disabled');
+leftElements.forEach(el => observerLeft.observe(el));
+
 function FadeHello () {
-	let opacity = 1 - window.pageYOffset / 300;
+	let opacity = 1 - window.scrollY / 300;
 	hello.style.opacity = opacity < 0 ? 0 : opacity;
 }
 
 function FadeVideo () {
-	let opacity = 1 - window.pageYOffset / window.innerHeight;
+	let opacity = 1 - window.scrollY / window.innerHeight;
 	video.style.display = opacity < 0 ? "none" : "initial";
 }
 
@@ -106,7 +146,7 @@ function SendMail () {
 const con = document.getElementById('console');
 const target = document.getElementById('text');
 
-function consoleText(words, colors) {
+function consoleText(words, colors, waitTime=400, intervalTime=50) {
 	if (colors === undefined) colors = ['#fff'];
 
 	var letterCount = 1;
@@ -115,8 +155,6 @@ function consoleText(words, colors) {
 
 	target.setAttribute('style', 'color:' + colors[0])
 	window.setInterval(() => {
-		var waitTime = 800;
-
 		if (letterCount === 0 && waiting === false) {
 			waiting = true;
 	    	target.innerHTML = words[0].substring(0, letterCount);	
@@ -143,13 +181,14 @@ function consoleText(words, colors) {
 			target.innerHTML = words[0].substring(0, letterCount)
 			letterCount += x;
 		}
-	}, 100)
+	}, intervalTime)
 
   	// Blink //
 	window.setInterval(
 		() => con.className = (con.className === '') ? 'hidden' : ''
-	, 400)
+	, waitTime/2)
 }
 
+video.playbackRate = 2;
 consoleText(['Python', 'Node JS', 'C++', 'C#', 'Java FX'], ['lightblue','yellow','magenta', 'green', 'brown']);
 SwitchProject(0);

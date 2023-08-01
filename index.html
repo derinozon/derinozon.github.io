@@ -26,22 +26,24 @@
 		</div>
 
 		<div id="about" class="dark-theme center-content relative">
-			<h1>Hello there!</h1>
-			<p>
+			<h1 class="anim-fade-up-disabled">Hello there!</h1>
+			<p class="anim-fade-up-disabled">
 				I'm a developer transforming ideas and dreams into interactive content currently located in Germany
 			</p>
-			<a target="_blank" href="https://github.com/derinozon">
-				<img id="s1" class="social-img" src="res/logo/github-white.svg" alt="Github Logo">
-			</a>
-			<a target="_blank" href="https://derinozon.itch.io">
-				<img id="s2" class="social-img" src="res/logo/itch-white.svg" alt="Itch Logo">
-			</a>
-			<a target="_blank" href="https://www.linkedin.com/in/derinozon/">
-				<img id="s3" class="social-img" src="res/logo/in-white.svg" alt="Linkedin Logo">
-			</a>
-			<a target="_blank" href="https://sketchfab.com/derinozon">
-				<img id="s4" class="social-img" src="res/logo/sketch-white.svg" alt="Sketchfab Logo">
-			</a>
+			<section class="anim-fade-up-disabled">
+				<a target="_blank" href="https://github.com/derinozon">
+					<img id="s1" class="social-img" src="res/logo/github-white.svg" alt="Github Logo">
+				</a>
+				<a target="_blank" href="https://derinozon.itch.io">
+					<img id="s2" class="social-img" src="res/logo/itch-white.svg" alt="Itch Logo">
+				</a>
+				<a target="_blank" href="https://www.linkedin.com/in/derinozon/">
+					<img id="s3" class="social-img" src="res/logo/in-white.svg" alt="Linkedin Logo">
+				</a>
+				<a target="_blank" href="https://sketchfab.com/derinozon">
+					<img id="s4" class="social-img" src="res/logo/sketch-white.svg" alt="Sketchfab Logo">
+				</a>
+			</section>
 		</div>
 
 		<div id="mid-img" class="parallax relative"></div>
@@ -49,26 +51,26 @@
 
 		
 		<div id="skills" class="dark-theme center-content relative v-box">
-			<h1>Things i do</h1>
+			<h1 class="anim-fade-up-disabled">Things i do</h1>
 			
 			<div id="skills-container" class="h-box">
 				<div class="skills-box1">
-					<div class='console-container h-box'>
+					<div class="console-container h-box anim-fade-right-disabled">
 						<span>~ root$&nbsp;</span>
-						<span id='text'></span>
-						<div id='console'>
+						<span id="text"></span>
+						<div id="console">
 						|<!-- &#65372; -->
 						</div>
 					</div>
-					<p>I'm constantly learning and experimenting with new languages and technologies since highschool. I code with love and build Web/Mobile/Desktop/XR apps that inspire.</p>
+					<p class="anim-fade-right-disabled">I'm constantly learning and experimenting with new languages and technologies since highschool. I code with love and build Web/Mobile/Desktop/XR apps that inspire.</p>
 				</div>
 
-				<div class="skills-box2">
+				<div class="skills-box2 anim-fade-left-disabled">
 					<div class="sketchfab-embed-wrapper h-box">
 						<iframe title="Teapot" src="engine/particle.html"></iframe>
 					</div>
 
-					<p>I work on my C++ Game Engine in my spare time. Its highly optimised nature makes rendering this N-Body simulation realtime on the web possible.</p>
+					<p class="anim-fade-left-disabled">I work on my C++ Game Engine in my spare time. Its highly optimised nature makes rendering this N-Body simulation realtime on the web possible.</p>
 				</div>
 			</div>
 		</div>
@@ -76,9 +78,9 @@
 		<div id="bot-img" class="parallax relative"></div>
 
 		<div id="projects" class="dark-theme center-content relative v-box">
-			<h1>Notable Projects</h1>
+			<h1 class="anim-fade-up-disabled">Notable Projects</h1>
 			
-			<div id="project-container" class="h-box">
+			<div id="project-container" class="h-box anim-fade-up-disabled">
 				<a onclick="SwitchProject(-1)">
 					<img class="project-arrow" src="res/left-arrow-button.svg" alt="Left Arrow">
 				</a>
@@ -89,16 +91,16 @@
 					<img class="project-arrow" src="res/right-arrow-button.svg" alt="Right Arrow">
 				</a>	
 			</div>
-			<h2 id="project-header">Sample Text</h2>
-			<p id="project-description">Sample Text</p>
+			<h2 class="anim-fade-up-disabled" id="project-header">Sample Text</h2>
+			<p class="anim-fade-up-disabled" id="project-description">Sample Text</p>
 		</div>
 
 		<div id="footer-img" class="parallax relative"></div>
 
 		<div id="contact" class="dark-theme center-content relative">
-			<h1>Say Hi</h1>
-			<p>Send your message to my mail address</p>
-			<div class="v-box">
+			<h1 class="anim-fade-up-disabled">Say Hi</h1>
+			<p class="anim-fade-up-disabled">Send your message to my mail address</p>
+			<div class="v-box anim-fade-up-disabled">
 				<input placeholder="Your subject..." class="input-field" type="email" id="mailsender">
 				<textarea placeholder="Your message..." class="input-field" id="mailtext" rows="8" cols="50"></textarea>
 				<button type="submit" onclick="SendMail()">Send</button>
@@ -112,7 +114,7 @@
 
 		
 
-		<script src="/src/index.js" type="text/javascript" charset="utf-8"></script>
+		<script defer src="/src/index.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

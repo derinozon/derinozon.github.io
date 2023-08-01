@@ -24,6 +24,48 @@ p {
 	font-size: 1.5rem;
 }
 
+.anim-fade-up-disabled {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateY(100%);
+	transition: all 1s;
+}
+
+.anim-fade-up-enabled {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+	transition: all 1s;
+}
+
+.anim-fade-right-disabled {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(-100%);
+	transition: all 1s;
+}
+
+.anim-fade-right-enabled {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+	transition: all 1s;
+}
+
+.anim-fade-left-disabled {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(100%);
+	transition: all 1s;
+}
+
+.anim-fade-left-enabled {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+	transition: all 1s;
+}
+
 .dark-theme {
     background-color: #1e1f1c;
 	color: #c8c8c8;
