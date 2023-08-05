@@ -26,14 +26,14 @@ p {
 
 .anim-fade-up-disabled {
 	opacity: 0;
-	filter: blur(5px);
-	transform: translateY(100%);
+	/* filter: blur(5px); */
+	transform: translateY(30%);
 	transition: all 1s;
 }
 
 .anim-fade-up-enabled {
 	opacity: 1;
-	filter: blur(0);
+	/* filter: blur(0); */
 	transform: translateY(0);
 	transition: all 1s;
 }
