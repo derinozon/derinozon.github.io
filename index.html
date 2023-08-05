@@ -12,9 +12,12 @@
 		<link rel="stylesheet" type="text/css" href="styles/index.css">
 	</head>
 	<body>
+		<div class="loader"></div>
+		
 		<video playsinline autoplay muted loop>
 			<source src="res/PortfolioShortLow0.mp4" type="video/mp4">
 		</video>
+
 
 		<div id="info" class="v-box relative">
 			<div id="h-hello" class="center-content">
@@ -56,25 +59,25 @@
 			<h1 class="anim-fade-up-disabled">Things i do</h1>
 			
 			<div id="skills-container" class="h-box">
-				<div class="skills-box1 anim-fade-up-disabled">
-					<div class="console-container h-box">
+				<div class="skills-box1">
+					<div class="console-container h-box anim-fade-left-disabled">
 						<span>~ root$&nbsp;</span>
 						<span id="text"></span>
 						<div id="console">
 						|<!-- &#65372; -->
 						</div>
 					</div>
-					<p>I'm constantly learning and experimenting with new languages and technologies since highschool. I code with love and build Web/Mobile/Desktop/XR apps that inspire.</p>
+					<p class="anim-fade-left-disabled">I'm constantly learning and experimenting with new languages and technologies since highschool. I code with love and build Web/Mobile/Desktop/XR apps that inspire.</p>
 				</div>
 
 				<div class="skills-box2 anim-fade-up-disabled">
-					<div id="iframe-container" class="h-box">
+					<div id="iframe-container" class="h-box anim-fade-right-disabled">
 						<!-- <iframe title="Teapot" src="engine/particle.html"></iframe> -->
 						<img class="social-img" src="res/play-solid.svg" alt="Play Button">
 						<!-- <button>PLAY</button> -->
 					</div>
 
-					<p>I work on my C++ Game Engine in my spare time. Its highly optimised nature makes rendering this N-Body simulation realtime on the web possible.</p>
+					<p class="anim-fade-right-disabled">I work on my C++ Game Engine in my spare time. Its highly optimised nature makes rendering this N-Body simulation realtime on the web possible.</p>
 				</div>
 			</div>
 		</div>

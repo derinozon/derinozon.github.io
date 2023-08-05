@@ -1,4 +1,18 @@
-const hello = document.getElementById("h-hello");
+window.addEventListener("load", () => {
+	const loader = document.querySelector(".loader");
+  
+	loader.classList.add("loader--hidden");
+  
+	loader.addEventListener("transitionend", () => {
+	//   document.body.removeChild(loader);
+	loader.remove();
+	});
+  });
+  
+ 
+ 
+ 
+  const hello = document.getElementById("h-hello");
 const video = document.getElementsByTagName("video")[0];
 
 const playbtn = document.getElementById("iframe-container").querySelector("img");
@@ -30,32 +44,9 @@ function RegisterAnimation (enabledTag, disabledTag) {
 	document.querySelectorAll('.'+disabledTag).forEach(el => observerUp.observe(el));
 }
 
-
-const observerRight = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			entry.target.classList.add('anim-fade-right-enabled')
-			entry.target.classList.remove('anim-fade-right-disabled')
-		}
-	})
-})
-
-const observerLeft = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			entry.target.classList.add('anim-fade-left-enabled')
-			entry.target.classList.remove('anim-fade-left-disabled')
-		}
-	})
-})
-
 RegisterAnimation('anim-fade-up-enabled', 'anim-fade-up-disabled');
-
-const rightElements = document.querySelectorAll('.anim-fade-right-disabled');
-rightElements.forEach(el => observerRight.observe(el));
-
-const leftElements = document.querySelectorAll('.anim-fade-left-disabled');
-leftElements.forEach(el => observerLeft.observe(el));
+RegisterAnimation('anim-fade-right-enabled', 'anim-fade-right-disabled');
+RegisterAnimation('anim-fade-left-enabled', 'anim-fade-left-disabled');
 
 function FadeHello () {
 	let opacity = 1 - window.scrollY / 300;

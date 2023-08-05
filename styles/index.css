@@ -1,7 +1,40 @@
-/* @font-face {
-	font-family: 'Roboto';
-	src: url('res/font/Roboto/Roboto-Light.ttf');
-} */
+.loader {
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgb(20, 20, 20);
+	transition: opacity 0.75s, visibility 0.75s;
+}
+  
+.loader--hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.loader::after {
+	content: "";
+	width: 75px;
+	height: 75px;
+	border: 5px solid rgb(20, 20, 20);
+	border-top-color: #dddddd;
+	border-radius: 50%;
+	animation: loading 0.75s ease infinite;
+}
+  
+@keyframes loading {
+	from {
+	  transform: rotate(0turn);
+	}
+	to {
+	  transform: rotate(1turn);
+	}
+}
 
 .anim-fade-up-disabled {
 	opacity: 0;
@@ -46,7 +79,7 @@
 }
 
 .dark-theme {
-    background-color: #1e1f1c;
+	background-color: #1e1f1c;
 	color: #c8c8c8;
 }
 
@@ -55,15 +88,15 @@
 }
 
 .parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .center-content {
-    text-align: center;
-    margin: 0 auto;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .h-box {
@@ -102,8 +135,8 @@ video {
 }
 
 #top-img {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 	justify-content: center;
 
 	height: 100vh;
@@ -117,13 +150,13 @@ video {
 }
 
 #h-hello h1 {
-    /* font-size: 35px; */
+	/* font-size: 35px; */
 	filter: drop-shadow(1px 1px 0px rgb(0, 0, 0));
 	font-weight: bolder;
 }
 
 #h-hello p {
-    /* font-size: 1rem; */
+	/* font-size: 1rem; */
 	filter: drop-shadow(1px 1px 0px rgb(0, 0, 0));
 	font-weight: bolder;
 	font-family: 'Roboto Mono', monospace;
@@ -146,7 +179,7 @@ video {
 	/* position: fixed; */
 	filter: drop-shadow(1px 1px 0px rgb(0, 0, 0));
 	position: relative;
-	top: 20vh;
+	top: 10vh;
 	animation: moveUpDown 0.7s infinite;
 }
 
@@ -163,7 +196,7 @@ video {
 
 #about {
 	padding: 30px;
-    text-align: center;
+	text-align: center;
 }
 
 #about a {
@@ -208,7 +241,7 @@ video {
 }
 
 #mid-img {
-    background-image: url("../res/img/MoM.jpg");
+	background-image: url("../res/img/MoM.jpg");
 }
 
 /* SKILLS */
@@ -312,7 +345,7 @@ video {
 /* PROJECTS */
 
 #bot-img {
-    background-image: url("../res/img/sinek.png");
+	background-image: url("../res/img/sinek.png");
 }
 
 #project-image {
@@ -374,7 +407,7 @@ video {
 /* CONTACT */
 
 #footer-img {
-    background-image: url("../res/img/Savannah.png");
+	background-image: url("../res/img/Savannah.png");
 	filter: blur(3px);
 }
 
@@ -383,34 +416,34 @@ video {
 }
 
 #contact button {
-    border: none;
-    margin: 0;
+	border: none;
+	margin: 0;
 	padding: 0;
 	
 	border: 1px solid rgb(30, 31, 28);
 	border-radius: 4px;
-    float: left;
-    display: block;
-    color: rgb(200,200,200);
+	float: left;
+	display: block;
+	color: rgb(200,200,200);
 	font-size: 1.1rem;
 
-    text-align: center;
+	text-align: center;
 	text-decoration: none;
 	
 	margin: 20px;
-    padding: 14px;
-    padding-left: 25px;
-    padding-right: 25px;
-    
-    transition: background 0.2s;
+	padding: 14px;
+	padding-left: 25px;
+	padding-right: 25px;
+	
+	transition: background 0.2s;
 }
 
 #contact button:not(.active-editor-btn) {
-    background-color: rgb(47, 49, 41);
+	background-color: rgb(47, 49, 41);
 }
 
 #contact button:hover:not(.active-editor-btn) {
-    background-color: rgb(65, 67, 58);
+	background-color: rgb(65, 67, 58);
 }
 
 .input-field {
@@ -460,12 +493,12 @@ video {
 }
 
 @media (max-width:568px) {
-    /* .parallax {
-        background-attachment: scroll;
-    	background-position: center;
-    	background-repeat: no-repeat;
-    	background-size: cover;
-    } */
+	/* .parallax {
+		background-attachment: scroll;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	} */
 
 	.console-container {
 		font-size: 1.6rem;
