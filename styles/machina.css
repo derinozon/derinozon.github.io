@@ -1,0 +1,14 @@
+/* #8d40f0 */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Roboto:wght@100&display=swap');
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.m_link {
+	color: rgb(95, 97, 88);
+}
+.m_link:hover {
+	color: rgb(65, 67, 58);
+}

@@ -8,20 +8,22 @@
 		<meta name="keywords" content="Derin Özön, Game Developer, Software Engineer, Germany, Freelance">
 		<meta name="description" content="Website of the freelance developer Derin Özön.">
 		<meta name="author" content="Derin Özön">
-		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" type="text/css" href="styles/machina.css">
+		<link rel="stylesheet" type="text/css" href="styles/index.css">
 	</head>
 	<body>
 		<video playsinline autoplay muted loop>
 			<source src="res/PortfolioShortLow0.mp4" type="video/mp4">
 		</video>
 
-		<div id="info" class="relative">
+		<div id="info" class="v-box relative">
 			<div id="h-hello" class="center-content">
 				<img src="res/img/me.jpg" id="pp" class="center-content" alt="My Photo">
-				<h>DERİN ÖZÖN</h>
-				<p>Freelance Developer</p>
-				<p>AI Student@THD</p>
-				<!-- <img class="down-arrrow" src="res/chevron-down-solid.svg" alt="Down Arrow"> -->
+				<h1>DERİN ÖZÖN</h1>
+				<p>Software Developer<br>AI Student@THD</p>
+			</div>
+			<div id="scroll-arrow">
+				<img src="res/chevron-down-solid.svg" alt="Down Arrow">
 			</div>
 		</div>
 
@@ -55,7 +57,7 @@
 			
 			<div id="skills-container" class="h-box">
 				<div class="skills-box1 anim-fade-up-disabled">
-					<div class="console-container h-box ">
+					<div class="console-container h-box">
 						<span>~ root$&nbsp;</span>
 						<span id="text"></span>
 						<div id="console">
@@ -66,8 +68,10 @@
 				</div>
 
 				<div class="skills-box2 anim-fade-up-disabled">
-					<div class="sketchfab-embed-wrapper h-box">
-						<iframe title="Teapot" src="engine/particle.html"></iframe>
+					<div id="iframe-container" class="h-box">
+						<!-- <iframe title="Teapot" src="engine/particle.html"></iframe> -->
+						<img class="social-img ASDF" src="res/play-solid.svg" alt="Play Button">
+						<!-- <button>PLAY</button> -->
 					</div>
 
 					<p>I work on my C++ Game Engine in my spare time. Its highly optimised nature makes rendering this N-Body simulation realtime on the web possible.</p>
@@ -99,7 +103,7 @@
 
 		<div id="contact" class="dark-theme center-content relative">
 			<h1 class="anim-fade-up-disabled">Say Hi</h1>
-			<p class="anim-fade-up-disabled">Send your message to my mail address</p>
+			<p class="anim-fade-up-disabled">Send your message to derinozon@gmail.com</p>
 			<div class="v-box anim-fade-up-disabled">
 				<input placeholder="Your subject..." class="input-field" type="email" id="mailsender">
 				<textarea placeholder="Your message..." class="input-field" id="mailtext" rows="8" cols="50"></textarea>
@@ -109,7 +113,7 @@
 
 		<div id="source" class="center-content relative">
 			<p> Derin Özön | 2023 </p>
-			<p> You can access the source code <a href="https://github.com/derinozon/derinozon.github.io">here!</a> </p>
+			<p> You can access the source code <a class="m_link" href="https://github.com/derinozon/derinozon.github.io">here!</a> </p>
 		</div>
 
 		

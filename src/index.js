@@ -1,6 +1,22 @@
 const hello = document.getElementById("h-hello");
 const video = document.getElementsByTagName("video")[0];
 
+const playbtn = document.getElementById("iframe-container").querySelector("img");
+playbtn.addEventListener("click", function() {
+	playbtn.classList.add("hidden");
+
+	var iframe = document.createElement("iframe");
+    
+    iframe.src = "engine/particle.html";
+    var container = document.getElementById("iframe-container");
+    
+    // Clear the container (in case you want to replace any existing iframe)
+    container.innerHTML = "";
+    
+    // Append the iframe to the container
+    container.appendChild(iframe);
+});
+
 function RegisterAnimation (enabledTag, disabledTag) {
 	const observerUp = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
@@ -44,6 +60,7 @@ leftElements.forEach(el => observerLeft.observe(el));
 function FadeHello () {
 	let opacity = 1 - window.scrollY / 300;
 	hello.style.opacity = opacity < 0 ? 0 : opacity;
+	document.getElementById("scroll-arrow").style.opacity = opacity;
 }
 
 function FadeVideo () {
